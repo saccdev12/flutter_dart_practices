@@ -10,6 +10,9 @@ void main() {
   //otra manera de definir listado de strings
   final sprites = <String>['Pikachu/front.png', 'Pikachu/back.png'];
 
+  //dynamic == null
+  dynamic errorMessage = 'Hola';
+
   //para hacer un String multilínea en Dart usamos las 3 comillas al principio y final
   print("""
 
@@ -18,6 +21,7 @@ void main() {
   $isAlive
   $skills
   $sprites
+  $errorMessage
 
 """);
 }
