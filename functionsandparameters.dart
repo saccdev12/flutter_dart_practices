@@ -24,7 +24,7 @@ int addThreeNumbers(int a, int b, int c) {
 int addFourNumbers(int a, int b, int c, int d) => a + b + c + d;
 
 //Acá hacemos que uno de los valores enteros sea opcional
-int addTwoNumbersOptional(int a, [int? b]) {
-  b = b ?? 0;
+int addTwoNumbersOptional(int a, [int b = 0]) {
+  //b = b ?? 0;
   return a + b;
 }
