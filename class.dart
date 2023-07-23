@@ -1,15 +1,21 @@
 void main() {
-  final GamerPC asus = GamerPC('AMD Ryzen 9', 'RTX 3080');
-  print(asus);
-  print(asus.processor);
-  print(asus.graphiccard);
+  final PC gamerpc = PC(
+      processor: 'Processor: ' 'AMD Ryzen 9',
+      graphics: 'Graphic Card: ' 'RTX 3080');
+
+  print(gamerpc.toString());
+  print(gamerpc.processor);
+  print(gamerpc.graphics);
 }
 
-class GamerPC {
+class PC {
   String processor;
-  String graphiccard;
+  String graphics;
 
-  GamerPC(String pProcessor, String pGraphiccard)
-      : processor = pProcessor,
-        graphiccard = pGraphiccard;
+  PC({required this.processor, this.graphics = 'Sin gráficos'});
+
+  @override
+  String toString() {
+    return '$processor - $graphics';
+  }
 }
